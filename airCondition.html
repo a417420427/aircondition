@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.box{
+		background: #666
+	}
+		#air{
+			margin-left:150px ;
+			border: 1px solid #f60;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<canvas id="air" width="800" height="800"></canvas>
+</div>
+	
+
+	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		var air = document.getElementById('air');
+		var air = air.getContext('2d');
+		console.log(air);
+		
+	
+		air.fillStyle = '#fff';
+		air.fillRect(100,100,1,600)
+		air.fillRect(100,700,600,1)
+		
+		for (var i = 0; i <= 6; i++) {
+			air.fillRect(90,100+i*100,10,1)
+			air.fillText(300-i*50,50,100+100*i)
+		
+			air.fillRect(100*i+100,700,1,10)
+			air.fillText(i*5,98+100*i,730)
+		}
+
+		var obj = {
+			init:function(){
+				
+			}
+		}
+		
+	</script>
+
+</body>
+</html>
